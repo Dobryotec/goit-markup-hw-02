@@ -4,6 +4,8 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --background-color: #ffffff;
+  --secondary-title-color: #fefefe;
+  --place-color: rgba(255, 255, 255, 0.6);
 }
 body {
   background-color: var(--background-color);
@@ -11,25 +13,28 @@ body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
-  line-height: 1.33;
 }
 /*------------------------------------------------header-------------------------------------------*/
 .logo {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   color: var(--accent-color);
   text-decoration: none;
 }
+.studio {
+  color: var(--title-text-color);
+}
 .nav-list {
   list-style: none;
 }
 .site-nav .link {
   font-weight: 500;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   color: var(--title-text-color);
   text-decoration: none;
+  line-height: 1.14;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -64,25 +69,31 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #fefefe;
+  color: var(--secondary-title-color);
 }
 .hero .button-primary {
-  font-family: "Roboto";
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   text-align: center;
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
-  color: #fefefe;
+  color: var(--secondary-title-color);
   cursor: pointer;
 }
+.button-primary:hover,
+.button-primary:focus {
+  background-color: #188ce8;
+}
 .section-title {
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--title-text-color);
+  line-height: 1.14;
 }
-.section-title .text {
+.text {
   line-height: 1.71;
 }
 .work-title,
@@ -94,9 +105,7 @@ body {
 
   color: var(--title-text-color);
 }
-.workers {
-  background-color: #f5f4fa;
-}
+
 .workers .subtitle {
   font-weight: 500;
   font-size: 16px;
@@ -112,15 +121,24 @@ body {
 /*---------------------------------------------main potfolio-------------------------------------*/
 
 .button-secondary {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  letter-spacing: 0.03em;
 }
 .button-secondary:hover,
 .button-secondary:focus {
   background-color: var(--accent-color);
-  color: #fefefe;
+  color: var(--secondary-title-color);
   cursor: pointer;
+}
+.portfolio-link {
+  text-decoration: none;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
+  color: var(--accent-color);
 }
 .portfolio-title {
   font-weight: 700;
@@ -137,6 +155,9 @@ body {
 .footer {
   background-color: #2f303a;
 }
+.logo-studio {
+  color: var(--background-color);
+}
 .link-place {
   font-style: normal;
   line-height: 1.71;
@@ -150,7 +171,7 @@ body {
 .link-adress {
   font-style: normal;
   line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--place-color);
   text-decoration: none;
 }
 .link-adress:hover,
